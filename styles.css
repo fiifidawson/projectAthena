@@ -1,0 +1,577 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1A1A1A; /* Soft black */
+  color: #FFFFFF; /* White text */
+  overflow: hidden;
+}
+
+/* Envelope Landing Page */
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1A1A1A; /* Soft black */
+  cursor: pointer;
+}
+
+.container {
+  width: 100px;
+  height: 300px;
+  position: relative;
+  transform: scale(0.8);
+}
+
+.container div {
+  position: absolute;
+}
+
+.container .glass {
+  height: 420px;
+  width: 250px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 300px 300px 0px 0px;
+  left: -80px;
+  top: -100px;
+  border-bottom: 15px solid rgba(255, 255, 255, 0.5);
+}
+
+.container .glass:after {
+  width: 8px;
+  background: rgba(255, 255, 255, 0.28);
+  content: '';
+  position: absolute;
+  height: 80px;
+  top: 180px;
+  border-radius: 100px;
+  left: 10px;
+}
+
+.container .glass:before {
+  width: 8px;
+  background: rgba(255, 255, 255, 0.28);
+  content: '';
+  position: absolute;
+  height: 15px;
+  top: 280px;
+  border-radius: 100px;
+  left: 10px;
+}
+
+.container .glow {
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  border: 1px solid rgba(245, 148, 184, 0.47);
+  box-shadow: 0px 0px 10px #f594b8;
+  left: -40px;
+  top: -40px;
+  transition: all 0.5s ease;
+  animation: glowing 2.5s ease-in-out infinite;
+}
+
+.container .rose-petals > div {
+  background: #E63946; /* Romantic red */
+  width: 45px;
+  height: 80px;
+  position: absolute;
+  transition: all 0.5s ease-out;
+}
+
+.container .rose-petals > div:nth-child(1) {
+  border-radius: 15px;
+  left: 20px;
+  top: -6px;
+  background: #E63946; /* Romantic red */
+}
+
+.container .rose-petals > div:nth-child(2),
+.container .rose-petals > div:nth-child(4),
+.container .rose-petals > div:nth-child(6) {
+  border-radius: 0px 30px 0px 30px;
+  background: #B81B43; /* Darker red */
+  left: 0;
+  transform-origin: bottom right;
+}
+
+.container .rose-petals > div:nth-child(3),
+.container .rose-petals > div:nth-child(5),
+.container .rose-petals > div:nth-child(7) {
+  border-radius: 30px 0px 30px 0px;
+  left: 40px;
+  transform-origin: bottom left;
+}
+
+.container .rose-petals > div:nth-child(2) {
+  animation: openRose2 3s ease-in-out forwards;
+  z-index: 5;
+  background: #9E183A; /* Darker red */
+  top: 10px;
+  height: 70px;
+  animation-delay: 2s;
+}
+
+.container .rose-petals > div:nth-child(3) {
+  animation: openRose3 3s ease-in-out forwards;
+  z-index: 4;
+  background: #9E183A; /* Darker red */
+  top: 10px;
+  height: 70px;
+  animation-delay: 2s;
+}
+
+.container .rose-petals > div:nth-child(4) {
+  animation: openRose4 3s ease-in-out forwards;
+  z-index: 3;
+  background: #B81B43; /* Darker red */
+  top: 5px;
+  height: 75px;
+  animation-delay: 2s;
+}
+
+.container .rose-petals > div:nth-child(5) {
+  animation: openRose5 3s ease-in-out forwards;
+  z-index: 2;
+  background: #B81B43; /* Darker red */
+  top: 5px;
+  height: 75px;
+  animation-delay: 2s;
+}
+
+.container .rose-petals > div:nth-child(6) {
+  animation: openRose6 3s ease-in-out forwards;
+  z-index: 1;
+  background: #C9204B; /* Romantic red */
+  animation-delay: 2s;
+}
+
+.container .rose-petals > div:nth-child(7) {
+  animation: openRose7 3s ease-in-out forwards;
+  z-index: 0;
+  background: #C9204B; /* Romantic red */
+  animation-delay: 2s;
+}
+
+.container .rose-leaves > div:nth-last-child(1) {
+  width: 55px;
+  height: 30px;
+  background: #338F37; /* Green */
+  position: absolute;
+  top: 60px;
+  left: 15px;
+  border-radius: 100px;
+}
+
+.container .rose-leaves > div:nth-child(1) {
+  width: 6px;
+  height: 230px;
+  border: none;
+  top: 80px;
+  background: #066406; /* Dark green */
+  left: 40px;
+}
+
+.container .thorns > div {
+  width: 30px;
+  height: 30px;
+  background: #066406; /* Dark green */
+  top: 100px;
+  left: 10px;
+}
+
+.container .thorns > div:after {
+  width: 41px;
+  height: 31px;
+  border-radius: 100%;
+  background: #1A1A1A; /* Soft black */
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 17px;
+}
+
+.container .thorns > div:before {
+  width: 41px;
+  height: 31px;
+  border-radius: 100%;
+  background: #1A1A1A; /* Soft black */
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: -11px;
+  z-index: 0;
+}
+
+.container .thorns > div:nth-child(2) {
+  top: 150px;
+  transform: rotate(180deg);
+  left: 45px;
+}
+
+.container .thorns > div:nth-child(3) {
+  top: 180px;
+}
+
+.container .thorns > div:nth-child(4) {
+  top: 220px;
+  transform: rotate(180deg);
+  left: 45px;
+}
+
+.container .sparkles > div {
+  width: 4px;
+  height: 4px;
+  border-radius: 100px;
+  background: #FF96C0; /* Soft pink */
+  box-shadow: 0px 0px 12px 2px #FF4E85; /* Glow */
+  bottom: 0;
+  opacity: 0;
+  animation: sparkle 4s ease-in-out infinite;
+}
+
+.container .sparkles > div:nth-child(1) {
+  left: 60px;
+  animation-delay: 3s;
+}
+
+.container .sparkles > div:nth-child(2) {
+  left: 158px;
+  animation-delay: 2s;
+}
+
+.container .sparkles > div:nth-child(3) {
+  left: -22px;
+  animation-delay: 1s;
+}
+
+.container .sparkles > div:nth-child(4) {
+  left: 10px;
+  animation-delay: 1s;
+}
+
+.container .sparkles > div:nth-child(5) {
+  left: 177px;
+  animation-delay: 3s;
+}
+
+.container .sparkles > div:nth-child(6) {
+  left: -82px;
+  animation-delay: 2s;
+}
+
+.container .sparkles > div:nth-child(7) {
+  left: 45px;
+  animation-delay: 3s;
+}
+
+.container .sparkles > div:nth-child(8) {
+  left: 74px;
+  animation-delay: 3s;
+}
+
+.container .sparkles > div:nth-child(9) {
+  left: -79px;
+  animation-delay: 2s;
+}
+
+@keyframes glowing {
+  50% {
+    box-shadow: 0px 0px 60px #F594B8; /* Glow effect */
+  }
+}
+
+@keyframes sparkle {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 250px;
+  }
+}
+
+@keyframes openRose2 {
+  50% {
+    transform: rotate(-90deg);
+    top: 80px;
+    left: 100px;
+  }
+  100% {
+    transform: rotate(-60deg);
+    top: 210px;
+    left: -30px;
+  }
+}
+
+@keyframes openRose3 {
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes openRose4 {
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes openRose5 {
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes openRose6 {
+  100% {
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes openRose7 {
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+/* Timeline Scroll */
+.timeline {
+  display: none;
+  position: relative;
+  padding: 100px 20px;
+  background: #1A1A1A; /* Soft black */
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #E63946; /* Romantic red */
+  z-index: 0;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin: 30px 0;
+  padding: 15px;
+  background: #FFFFFF; /* White cards */
+  border: 2px solid #FFC1CC; /* Soft blush outline */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 40%;
+  position: relative;
+  z-index: 2;
+}
+
+.card.left {
+  left: 0;
+}
+
+.card.right {
+  left: 55%;
+}
+
+.card h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  margin: 0;
+  color: #E63946; /* Romantic red */
+}
+
+.card p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #1A1A1A; /* Soft black */
+}
+
+.icon {
+  font-size: 24px;
+  display: block;
+  margin: 10px 0;
+  color: #E63946; /* Romantic red */
+  z-index: 1000000000;
+}
+
+/* Heart Button to Next Page */
+.heart-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  width: 80px;
+  height: 80px;
+  background: #E63946; /* Romantic red */
+  border-radius: 50%;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+  z-index: 100; /* Higher z-index */
+}
+
+.heart-button span {
+  font-size: 40px;
+  color: #FFFFFF; /* White heart icon */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Pre-Proposal Section */
+.pre-proposal {
+  display: none;
+  text-align: center;
+  padding: 100px 20px;
+  background: #1A1A1A; /* Soft black */
+}
+
+.pre-proposal h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  margin: 0;
+  color: #E63946; /* Romantic red */
+}
+
+.pre-proposal img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin: 20px 0;
+  border: 2px solid #E63946; /* Romantic red */
+}
+
+.pre-proposal p {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #FFFFFF; /* White text */
+}
+
+#proceed-btn {
+  margin-top: 20px;
+  padding: 1px 8px;
+  font-size: 18px;
+  background: #E63946; /* Romantic red */
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#proceed-btn:hover {
+  background: #FFC1CC; /* Soft blush */
+}
+
+/* Final Proposal Page */
+.proposal {
+  display: none;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(45deg, #E63946, #FFC1CC); /* Romantic red to soft blush */
+}
+
+.proposal h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  margin: 0;
+  color: #FFFFFF; /* White text */
+}
+
+.heart {
+  font-size: 60px;
+  animation: pulse 1s infinite;
+  color: #FFFFFF; /* White heart */
+  z-index: 100; /* Higher z-index */
+}
+
+.final-message {
+  margin-top: 20px;
+}
+
+.final-message p {
+  font-size: 24px;
+  margin: 0;
+  color: #FFFFFF; /* White text */
+}
+
+.buttons {
+  margin-top: 20px;
+  z-index: 2;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#yes-btn {
+  background: #E63946; /* Romantic red */
+  color: white;
+}
+
+#yes-btn:hover {
+  background: #FFC1CC; /* Soft blush */
+}
+
+#no-btn {
+  background: #FFFFFF; /* White */
+  color: #1A1A1A; /* Soft black */
+  border: 1px solid #E63946; /* Romantic red */
+}
+
+#no-btn:hover {
+  background: #FFC1CC; /* Soft blush */
+}
+
+/* Emoji Approval Message */
+.emoji-approval {
+  display: none;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #FFFFFF; /* White text */
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Clickable Text on First Page */
+.text-container {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 100px;
+  background: #E63946; /* Romantic red */
+  margin-right: 20px;
+  margin-left: 40px;
+}
+
+.clickable-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: #E63946; /* Romantic red */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.clickable-text:hover {
+  color: #FFC1CC; /* Soft blush */
+}
+
